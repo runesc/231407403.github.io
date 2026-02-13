@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inclusión Digital para Adultos Mayores | Luis De Los Reyes</title>
+    <title>Inclusión Digital para Adultos Mayores | Fase final: Presentación de mi proyecto en una página Web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"
@@ -120,6 +120,98 @@
             width: 80px;
             height: 4px;
             background: var(--secondary);
+        }
+
+        /* Image Container Styles */
+        .image-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            background: #f5f5f5;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%);
+            color: #999;
+            font-size: 1.1rem;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .image-caption {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Section with Image Layout */
+        .section-with-image {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin: 40px 0;
+        }
+
+        .section-with-image.reverse {
+            direction: rtl;
+        }
+
+        .section-with-image.reverse>* {
+            direction: ltr;
+        }
+
+        @media (max-width: 768px) {
+            .section-with-image {
+                grid-template-columns: 1fr;
+            }
+
+            .section-with-image.reverse {
+                direction: ltr;
+            }
+        }
+
+        .section-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .section-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .section-image-placeholder {
+            width: 100%;
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e8e8e8 0%, #f5f5f5 100%);
+            color: #999;
+            font-size: 1rem;
+            text-align: center;
+            font-style: italic;
         }
 
         /* Cards */
@@ -418,6 +510,14 @@
             .stats {
                 grid-template-columns: 1fr;
             }
+
+            .image-placeholder {
+                height: 300px;
+            }
+
+            .section-image-placeholder {
+                height: 250px;
+            }
         }
 
         /* Pros and Cons */
@@ -495,9 +595,7 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
 
-    <style>
         /*  COLORS
 ========================================== */
         /*  FONTS
@@ -907,8 +1005,8 @@
                 Prepa en Línea-SEP
             </div>
         </div>
-
     </header>
+
     <div class="burger">
         <span></span>
     </div>
@@ -921,14 +1019,28 @@
             <li><a href="#funcionamiento">Funcionamiento del proyecto</a></li>
             <li><a href="#tecnologias">Tecnologías Emergentes Implementadas</a></li>
         </ul>
-
     </nav>
     <div class="overlay"></div>
+
     <div class="container">
         <!-- Presentación del Proyecto -->
         <section id="inicio">
             <h2>Presentación del Proyecto</h2>
-            <div class="card">
+
+            <!-- Imagen Hero de la sección -->
+
+            <div class="thumbnail-container">
+                <small style="text-align: center;display: block;">Figura 1. Adultos usando un smartphone</small>
+                <div class="image-container">
+                    <div class="image-placeholder">
+                        <img src="https://ik.imagekit.io/neuri/delete_me_soon/vitaly-gariev-Gefm1M8kyjI-unsplash%20(1)_QkZheRIqp.jpg"
+                            width="100%">
+                    </div>
+                </div>
+                <small style="text-align: center;display: block;">Nota. Retomado de Gariev, V. (2025)</small>
+            </div>
+
+            <div class="card" style="margin-top: 25px;">
                 <p>El proyecto "Inclusión Digital para Adultos Mayores" aborda el analfabetismo tecnológico que afecta a
                     alrededor de 630 personas mayores de 60 años en la colonia José López Portillo, Ciudad Victoria,
                     Tamaulipas.</p>
@@ -963,6 +1075,27 @@
         <!-- Problema -->
         <section id="problema">
             <h2>Problema Identificado</h2>
+
+            <!-- Layout con imagen a la izquierda -->
+            <div class="section-with-image">
+                <div class="thumbnail-container">
+                    <small>Figura 2. Adulto mayor usando una computadora</small>
+                    <div class="section-image">
+                        <div class="section-image-placeholder">
+                            <img src="https://ik.imagekit.io/neuri/delete_me_soon/analfabetismo-digital-1_KO6m3tbGn.webp"
+                                width="100%">
+                        </div>
+                    </div>
+                    <small>Nota. Retomado de Prado, B. (2022)</small>
+                </div>
+                <div>
+                    <p style="font-size: 1.1rem; margin-bottom: 20px; color: #555;">
+                        El analfabetismo digital es una barrera real que enfrentan nuestros adultos mayores,
+                        limitando su participación en la sociedad digital actual.
+                    </p>
+                </div>
+            </div>
+
             <div class="grid">
                 <div class="grid-item">
                     <h4>Analfabetismo Digital</h4>
@@ -989,17 +1122,36 @@
         <!-- Objetivos -->
         <section id="objetivos">
             <h2>Objetivos del Proyecto</h2>
-            <div class="card">
-                <h3>Objetivo General</h3>
-                <p>Reducir el analfabetismo tecnológico en los adultos mayores de la colonia José López Portillo, en
-                    Ciudad Victoria, Tamaulipas, mediante la implementación, durante un periodo de tres meses, de
-                    talleres presenciales de uso básico de celular, internet, videollamadas, trámites en línea y
-                    seguridad digital, apoyados por jóvenes voluntarios y materiales impresos adaptados, para fortalecer
-                    su autonomía, su acceso a servicios y su participación social.</p>
+
+            <!-- Layout con imagen a la derecha -->
+            <div class="section-with-image reverse">
+                <div class="thumbnail-container">
+                    <small>Figura 3. Adulto mayor utilizando una banca en línea</small>
+                    <div class="section-image">
+                        <div class="section-image-placeholder">
+                            <img src="https://ik.imagekit.io/neuri/delete_me_soon/vitaly-gariev-2WIQ2qM_AZE-unsplash%20(1)_vEIxvoi6V.webp"
+                                width="100%">
+                        </div>
+                    </div>
+                    <small>Nota. Retomado de Gariev, V. (2025)</small>
+                </div>
+                <div>
+                    <div class="card">
+                        <h3>Objetivo General</h3>
+                        <p>Reducir el analfabetismo tecnológico en los adultos mayores de la colonia José López
+                            Portillo, en
+                            Ciudad Victoria, Tamaulipas, mediante la implementación, durante un periodo de tres meses,
+                            de
+                            talleres presenciales de uso básico de celular, internet, videollamadas, trámites en línea y
+                            seguridad digital, apoyados por jóvenes voluntarios y materiales impresos adaptados, para
+                            fortalecer
+                            su autonomía, su acceso a servicios y su participación social.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Organización -->
+        <!-- Funcionamiento -->
         <section id="funcionamiento">
             <h2>¿Cómo Funcionará el Proyecto?</h2>
             <h3 style="margin-top: 50px; margin-bottom: 25px; color: var(--primary);">Actividades Principales</h3>
@@ -1036,6 +1188,26 @@
         <!-- Tecnologías -->
         <section id="tecnologias">
             <h2>Tecnologías Emergentes Implementadas</h2>
+
+            <!-- Layout con imagen a la izquierda -->
+            <div class="section-with-image">
+                <div class="thumbnail-container">
+                    <small>Figura 4. Tecnologías emergentes implementadas</small>
+                    <div class="section-image">
+                        <div class="section-image-placeholder">
+                            <img src="https://www.servnet.mx/hs-fs/hubfs/Blog/Blog_Articulos/Blog_Art%C3%ADculos/Blog_Articulos_2022_Noviembre/Blog_Articulos_2022_Noviembre_Art11_TECE/Cuales-son-las-caracteristicas-de-las-tecnologias-emergentes.png?width=1800&height=1000&name=Cuales-son-las-caracteristicas-de-las-tecnologias-emergentes.png"
+                                width="100%">
+                        </div>
+                    </div>
+                    <small>Nota. Retomado de Hernández, K. (2022)</small>
+                </div>
+                <div>
+                    <p style="font-size: 1.1rem; color: #555;">
+                        Las tecnologías emergentes son herramientas clave que nos permiten gestionar,
+                        ejecutar y evaluar este proyecto de manera eficiente y profesional.
+                    </p>
+                </div>
+            </div>
 
             <div class="tech-grid">
                 <div class="tech-card">
@@ -1125,11 +1297,9 @@
                         <li>Facilita el seguimiento y control de actividades</li>
 
                         <b style="margin-top: 25px; display: block;">Tecnologías web</b>
-                        <li>
-                            Mayor flexibilidad y personalización en el diseño del sitio del proyecto</li>
+                        <li>Mayor flexibilidad y personalización en el diseño del sitio del proyecto</li>
                         <li>Mejora la experiencia de usuario con interfaces modernas y responsivas</li>
                         <li>Permite integración con otras herramientas y plataformas</li>
-
                     </ul>
                 </div>
                 <div class="cons">
@@ -1153,9 +1323,9 @@
     </div>
 
     <footer>
-         <p><strong>Luis Alfredo De Los Reyes Andrade</strong></p>
-            <p>Módulo 23: Tecnologías emergentes para la administración y gestión</p>
-            <p>Grupo M23C1G56-019 • Prepa en Línea-SEP</p>
+        <p><strong>Luis Alfredo De Los Reyes Andrade</strong></p>
+        <p>Módulo 23: Tecnologías emergentes para la administración y gestión</p>
+        <p>Grupo M23C1G56-019 • Prepa en Línea-SEP</p>
     </footer>
 
     <script>
@@ -1180,11 +1350,9 @@
             section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(section);
         });
-    </script>
 
-    <script>
         // Animación de entrada para las tarjetas
-        document.querySelectorAll('.card, .stat, .timeline-item, .tech-card, .pros, .cons').forEach(item => {
+        document.querySelectorAll('.card, .stat, .timeline-item, .tech-card, .pros, .cons, .image-container, .section-image').forEach(item => {
             item.style.opacity = '0';
             item.style.transform = 'translateY(30px)';
             item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -1205,11 +1373,16 @@
                 e.preventDefault();
                 const targetId = link.getAttribute('href').substring(1);
                 document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+
+                // Cerrar el menú después de hacer clic
+                $('.burger').removeClass('clicked');
+                $('.overlay').removeClass('show');
+                $('nav').removeClass('show');
+                $('body').removeClass('overflow');
             });
         });
-    </script>
 
-    <script>
+        // Funcionalidad del menú hamburguesa
         $('.burger, .overlay').click(function () {
             $('.burger').toggleClass('clicked');
             $('.overlay').toggleClass('show');
